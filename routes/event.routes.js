@@ -3,6 +3,6 @@ const router = express.Router();
 
 const { createEvent } = require("../controllers/event.controller");
 
-router.get("/create-event", createEvent);
+router.post("/create-event", createEvent);
 
 module.exports = router;
