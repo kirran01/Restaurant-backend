@@ -5,6 +5,7 @@ const eventSchema = new Schema({
   day: {
     type: Date,
     required: false,
+    default: Date.now,
   },
   description: {
     type: String,
