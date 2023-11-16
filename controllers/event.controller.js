@@ -29,10 +29,10 @@ const deleteEvent = async (req, res) => {
 };
 const updateEvent = async (req, res) => {
   try {
-    const { title, description } = req.body;
+    const { title, description, day } = req.body;
     const updatedEvent = await Event.findByIdAndUpdate(
       req.params.id,
-      { $set: { title: title, description: description } },
+      { $set: { title: title, description: description, day:day } },
       { new: true }
     );
 
