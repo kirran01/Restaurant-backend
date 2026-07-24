@@ -5,6 +5,7 @@ const cors = require("cors");
 
 const eventRouter = require("./routes/event.routes");
 const authRouter = require("./routes/auth.routes");
+const foodRouter = require("./routes/food.routes")
 
 
 const app = express();
@@ -15,6 +16,7 @@ app.use(cors());
 app.use(express.json());
 app.use("/auth", authRouter);
 app.use("/events", eventRouter);
+app.use("/food", foodRouter)
 app.get("/", (req, res) => {
   res.send("Restaurant server up");
 });

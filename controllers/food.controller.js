@@ -10,7 +10,7 @@ const createFood = async (req, res) => {
       category
     });
     if (createdFood) {
-      res.send(createdFood, 'Food:');
+      res.send(createdFood);
     }
   } catch (err) {
     res.send(err);
